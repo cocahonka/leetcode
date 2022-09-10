@@ -3,5 +3,6 @@ name: leetcode
 environment:
   sdk: ^2.18.0
 dev_dependencies:
+  coverage: ^1.6.0
   test: ^1.21.5
   very_good_analysis: ^3.0.2
