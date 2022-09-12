@@ -9,13 +9,13 @@ class SolutionV2 {
       return false;
     }
 
-    var revertedNumber = 0;
-    while (x > revertedNumber) {
-      revertedNumber *= 10 + x % 10;
-      // ignore: parameter_assignments
-      x ~/= 10;
+    var leftSide = x;
+    var rightSide = 0;
+    while (leftSide > rightSide) {
+      rightSide = rightSide * 10 + leftSide % 10;
+      leftSide ~/= 10;
     }
 
-    return x == revertedNumber || x == revertedNumber ~/ 10;
+    return leftSide == rightSide || leftSide == rightSide ~/ 10;
   }
 }

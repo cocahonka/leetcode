@@ -15,6 +15,11 @@ void main() => group('roman_to_integer', () {
         expect(f2(-121), equals(false));
       });
 
+      test('f(123)', () {
+        expect(f1(123), equals(false));
+        expect(f2(123), equals(false));
+      });
+
       test('f(0)', () {
         expect(f1(0), equals(true));
         expect(f2(0), equals(true));
