@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() => group('roman_to_integer', () {
       final f1 = SolutionV1().isPalindrome;
-      final f2 = SolutionV1().isPalindrome;
+      final f2 = SolutionV2().isPalindrome;
 
       test('f(121)', () {
         expect(f1(121), equals(true));
