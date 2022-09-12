@@ -2,33 +2,41 @@ import 'package:leetcode/src/problem/9.palindrome_number.dart';
 import 'package:test/test.dart';
 
 void main() => group('roman_to_integer', () {
-      final f = Solution().isPalindrome;
+      final f1 = SolutionV1().isPalindrome;
+      final f2 = SolutionV1().isPalindrome;
 
       test('f(121)', () {
-        expect(f(121), equals(true));
+        expect(f1(121), equals(true));
+        expect(f2(121), equals(true));
       });
 
       test('f(-121)', () {
-        expect(f(-121), equals(false));
+        expect(f1(-121), equals(false));
+        expect(f2(-121), equals(false));
       });
 
       test('f(0)', () {
-        expect(f(0), equals(true));
+        expect(f1(0), equals(true));
+        expect(f2(0), equals(true));
       });
 
       test('f(9)', () {
-        expect(f(9), equals(true));
+        expect(f1(9), equals(true));
+        expect(f2(9), equals(true));
       });
 
       test('f(12321)', () {
-        expect(f(12321), equals(true));
+        expect(f1(12321), equals(true));
+        expect(f2(12321), equals(true));
       });
 
       test('f(213312)', () {
-        expect(f(213312), equals(true));
+        expect(f1(213312), equals(true));
+        expect(f2(213312), equals(true));
       });
 
       test('f(139310)', () {
-        expect(f(139310), equals(false));
+        expect(f1(139310), equals(false));
+        expect(f2(139310), equals(false));
       });
     });
