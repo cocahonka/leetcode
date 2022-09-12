@@ -1,6 +1,6 @@
 class Solution {
   bool isPalindrome(int x) =>
-      x.toString().split(' ').reversed.join() == x.toString();
+      x.toString().split('').reversed.join() == x.toString();
 
   bool isPalindromeV2(int x) {
     if (x.isNegative || (x % 10 == 0 && x != 0)) {
