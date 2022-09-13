@@ -27,6 +27,7 @@ doc/api/
 .flutter-plugins-dependencies
 
 coverage/
+benchmark/
 
 .vscode
 
