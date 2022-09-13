@@ -41,11 +41,8 @@ class SolutionV1 {
   ) sync* {
     yield 1;
 
-    final iter = prevRow.iterator..moveNext();
-    var first = iter.current;
-
-    while (iter.moveNext()) {
-      final second = iter.current;
+    var first = prevRow.first;
+    for (final second in prevRow.skip(1)) {
       yield first + second;
       first = second;
     }
