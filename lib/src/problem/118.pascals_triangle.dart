@@ -21,6 +21,41 @@
 
 class SolutionV1 {
   List<List<int>> generate(int numRows) =>
+      _generateRows().take(numRows).map((e) => e.toList()).toList();
+
+  Iterable<Iterable<int>> _generateRows() sync* {
+    yield const [1];
+    yield* _recursive();
+  }
+
+  Iterable<Iterable<int>> _recursive([
+    final Iterable<int> prevRow = const [1],
+  ]) sync* {
+    final newRow = _generateNewRow(prevRow);
+    yield newRow;
+    yield* _recursive(newRow);
+  }
+
+  Iterable<int> _generateNewRow(
+    final Iterable<int> prevRow,
+  ) sync* {
+    yield 1;
+
+    final iter = prevRow.iterator..moveNext();
+    var first = iter.current;
+
+    while (iter.moveNext()) {
+      final second = iter.current;
+      yield first + second;
+      first = second;
+    }
+
+    yield 1;
+  }
+}
+
+class SolutionV3 {
+  List<List<int>> generate(int numRows) =>
       _generateRows().take(numRows).toList();
 
   Iterable<List<int>> _generateRows([
