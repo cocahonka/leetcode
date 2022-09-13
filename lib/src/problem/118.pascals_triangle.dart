@@ -54,6 +54,27 @@ class SolutionV1 {
   }
 }
 
+class SolutionV2 {
+  List<List<int>> generate(int numRows) {
+    final rows = [
+      [1],
+      [1, 1]
+    ];
+
+    if (numRows == 1) return rows.take(1).toList();
+
+    for (var i = 1; i < numRows - 1; ++i) {
+      final newRow = [1];
+      for (var j = 0; j < i; ++j) {
+        newRow.add(rows[i][j] + rows[i][j + 1]);
+      }
+      rows.add(newRow + [1]);
+    }
+
+    return rows;
+  }
+}
+
 class SolutionV3 {
   List<List<int>> generate(int numRows) =>
       _generateRows().take(numRows).toList();
@@ -78,23 +99,26 @@ class SolutionV3 {
   }
 }
 
-class SolutionV2 {
-  List<List<int>> generate(int numRows) {
-    final rows = [
-      [1],
-      [1, 1]
-    ];
+class SolutionV4 {
+  List<List<int>> generate(int numRows) => _generateRows(numRows).toList();
 
-    if (numRows == 1) return rows.take(1).toList();
+  Iterable<List<int>> _generateRows(int numRows) sync* {
+    var currRow = <int>[1];
+    yield currRow;
 
-    for (var i = 1; i < numRows - 1; ++i) {
-      final newRow = [1];
-      for (var j = 0; j < i; ++j) {
-        newRow.add(rows[i][j] + rows[i][j + 1]);
-      }
-      rows.add(newRow + [1]);
+    for (var i = 1; i < numRows; ++i) {
+      currRow = _generateNewRow(currRow).toList();
+      yield currRow;
+    }
+  }
+
+  Iterable<int> _generateNewRow(List<int> prevRow) sync* {
+    yield 1;
+
+    for (var i = 1; i < prevRow.length; ++i) {
+      yield prevRow[i - 1] + prevRow[i];
     }
 
-    return rows;
+    yield 1;
   }
 }
