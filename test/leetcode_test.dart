@@ -10,6 +10,7 @@ import 'problem/1672.richest_customer_wealth.test.dart'
     as richest_customer_wealth;
 import 'problem/2170.minimum_operations_array_alternating.test.dart'
     as minimum_operations_array_alternating;
+import 'problem/412.fizz_buzz.test.dart' as fizz_buzz;
 import 'problem/9.palindrome_number.test.dart' as palindrome_number;
 
 void main() {
@@ -21,5 +22,6 @@ void main() {
     minimum_operations_array_alternating.main();
     running_sum_of_1d_array.main();
     richest_customer_wealth.main();
+    fizz_buzz.main();
   });
 }
