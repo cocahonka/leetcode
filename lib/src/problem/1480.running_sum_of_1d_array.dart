@@ -31,7 +31,12 @@
 
 import 'package:collection/collection.dart';
 
-class Solution {
+class SolutionV1 {
+  List<int> runningSum(final List<int> nums) =>
+      nums.fold([0], (l, e) => l..add(l.last + e)).skip(1).toList();
+}
+
+class SolutionV2 {
   List<int> runningSum(final List<int> nums) => nums
       .fold(<int>[], (prev, elem) => prev..add((prev.lastOrNull ?? 0) + elem));
 }
