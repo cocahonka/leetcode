@@ -12,6 +12,7 @@ import 'problem/1672.richest_customer_wealth.test.dart'
     as richest_customer_wealth;
 import 'problem/2170.minimum_operations_array_alternating.test.dart'
     as minimum_operations_array_alternating;
+import 'problem/383.ransom_note.test.dart' as ransom_note;
 import 'problem/412.fizz_buzz.test.dart' as fizz_buzz;
 import 'problem/876.middle_of_the_linked_list.test.dart'
     as middle_of_the_linked_list;
@@ -29,5 +30,6 @@ void main() {
     fizz_buzz.main();
     number_steps_to_reduce_number_to_zero.main();
     middle_of_the_linked_list.main();
+    ransom_note.main();
   });
 }
