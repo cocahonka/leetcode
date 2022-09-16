@@ -13,6 +13,8 @@ import 'problem/1672.richest_customer_wealth.test.dart'
 import 'problem/2170.minimum_operations_array_alternating.test.dart'
     as minimum_operations_array_alternating;
 import 'problem/412.fizz_buzz.test.dart' as fizz_buzz;
+import 'problem/876.middle_of_the_linked_list.test.dart'
+    as middle_of_the_linked_list;
 import 'problem/9.palindrome_number.test.dart' as palindrome_number;
 
 void main() {
@@ -26,5 +28,6 @@ void main() {
     richest_customer_wealth.main();
     fizz_buzz.main();
     number_steps_to_reduce_number_to_zero.main();
+    middle_of_the_linked_list.main();
   });
 }
