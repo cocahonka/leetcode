@@ -9,3 +9,4 @@ dev_dependencies:
 dependencies:
   benchmark_harness: ^2.2.0
   collection: ^1.16.0
+  equatable: ^2.0.5
